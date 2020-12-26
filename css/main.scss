@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img { 
+    width: 100%;
+}
+
+.nav-container{
+    background-color: #FF6565;
+
+    a {
+        color: white;
+    }
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+
+    .logo{
+        color: #89E3E9;
+        font-weight: bold;
+    }
+
+    ul {
+        display: flex;
+
+        a {
+            display: block;
+            padding: 0 1em;
+        }
+    }
+}
+
+.social-header, .title-design{
+    display: none;
+}
+
+.title{
+    background-color: #FF8989;
+    color: white;
+    display: grid;
+    text-align: center;
+    padding: 4em;
+}
+
+.meet{
+    display: flex;
+    margin: 0 auto;
+    width: 300px;
+    font-weight: bold;
+    color: #9477BA;
+
+    span{
+        margin-top: 1em;
+        margin-right: 0.5em;
+    }
+}
+
+section{
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.featured{
+    position: relative;
+}
+
+.featured::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #EAD487;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 25%;
+}
+
+.subtitle{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #AF0DE9;
+    letter-spacing: .2em;
+    font-size: .85em;
+    padding-right: 150px;
+}
+
+.featured-title{
+    color: black;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: -.7em;
+    display: block;
+    padding-right: 140px;
+}
+
+.featured-desc {
+    color: #3b3b3b;
+    margin-bottom: 3em;
+    font-size: .9em;
+    line-height: 1.8em;
+    font-weight: 300;
+}
+
+.skills {
+    background-color: #F6A070;
+}
+
+.skill-icon {
+    width: 128px;
+}
+
+.skills-container ul li{
+    background: white;
+    padding: 2em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+
+    .icon-container {
+        height: 100px;
+        display: grid;
+        place-content: center;
+        margin: 0 auto;
+
+        &.one{
+            width: 50px;
+        }
+
+        &.two{
+            width: 100px;
+        }
+        &three{
+            width: 60px;
+        }
+    }
+}
+
+.skill-title {
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.featured-desc {
+    margin-bottom: 2em;
+}
+
+.portfolio{
+    background: #F7F7F7;
+}
+
+.portfolio-container a img {
+    border-radius: 1em;
+    margin-bottom: 2em;
+}
+
+footer {
+    background: #FF6565;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+
+    .footer-text {
+        color: #ffffff;
+        font-size: 10px;
+    }
+
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+}
+
+
+@media only screen and (min-width: 800px){
+   
+    .featured, .portfolio {
+        text-align: left;
+    }
+
+    .featured, .portfolio-container {
+        display: grid;
+        grid-template-columns: 40% auto;
+    }
+
+    .left, .portfolio-left {
+        display: grid;
+        place-content: center;
+    }
+
+    .right {
+        margin-left: 2em;
+        margin-top: 1em;
+    }
+
+    .portfolio-img {
+        width: 80%;
+    }
+
+    .skills-container ul {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 1em;
+    }
+
+    .portfolio {
+        padding-top: 7em
+    }
+
+    .portfolio-container img{
+        margin-left: 2em;
+    }
+
+    #hire .subtitle{
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    #hire .featured-title {
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (min-width: 1050px){
+    .title {
+        height: 90vh;
+    }
+
+    .nav-container {
+        display: grid;
+        grid-template-columns: 66% auto;
+        background: unset;
+
+        header {
+            background: #FF6565;
+        }
+    }
+
+    .header {
+        padding: 2em 2em 2em 4em;
+    }
+
+    section {
+        padding: 4em;
+    }
+
+    .social-header{
+        padding: 2em 4em 2em 0;
+        display: block;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 7em;
+            float: right;
+
+            img {
+                width: 20px;
+            }
+        }
+    }
+
+    .title {
+        display: grid;
+        grid-template-columns: 66% auto;
+        background: unset;
+        padding: 0;
+
+        .content {
+            background: #FF8989;
+            padding: 6em 8em 6em 4em;
+            text-align: left;
+
+            h1 {
+                font-size: 3em;
+                line-height: 1.2em;
+            }
+        }
+    }
+
+    .meet {
+        margin: unset;
+    }
+
+    .title-design {
+        display: unset;
+        margin-left: -30%;
+        margin-top: 15%;
+        width: 100%
+    }
+
+    .portfolio-img {
+        float: right;
+        max-width: 500px;
+    }
+
+    #hire .subtitle{
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    #hire .featured-title {
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    header {
+        padding: 2em 2em 2em 10em;
+    }
+
+    .social-header {
+        padding: 2em 10em 2em 0;
+    }
+
+    section {
+        padding: 7em 10em 4em 10em;
+    }
+
+    .title .content {
+        padding: 6em 8em 6em 10em;
+    }
+
+    
+    #hire .subtitle{
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    #hire .featured-title {
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (min-width: 1550px) {
+    header {
+        padding: 2em 2em 2em 20em;
+    }
+
+    .social-header {
+        padding: 2em 20em 2em 0;
+    }
+
+    section {
+        padding: 4em 20em 4em 20em;
+    }
+
+    .title .content {
+        padding: 9em 20em 6em 20em;
+    }
+
+    #hire .subtitle{
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    #hire .featured-title {
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
